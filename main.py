@@ -1,4 +1,5 @@
 from stats import get_word_count
+from stats import get_each_char_count
 
 def get_book_text(filepath):
     """Reads the content of a book from a text file.
@@ -18,7 +19,8 @@ def main():
     book_path = 'books/frankenstein.txt'
     book_text = get_book_text(book_path)
     word_count = get_word_count(book_text)
-    print(f'{word_count} words found in the document')    
+    print(f'{word_count} words found in the document')
+    print(get_each_char_count(book_text))
 #    print(book_text)  # Print the text of the book
 
 main()
